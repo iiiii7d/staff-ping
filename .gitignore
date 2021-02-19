@@ -1,3 +1,6 @@
+# dotenv files
+.env
+
 # Prerequisites
 *.d
 
