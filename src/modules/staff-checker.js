@@ -25,8 +25,8 @@ module.exports = {
             }
             if (staffFound) {
                 if (parseInt(lastStaffSeen + client.config.pingWhenNoStaffFor) < Date.now()) {
-                    handler.log(`Sending ping...`);
-                    client.channels.cache.get(config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member has joined after a deadzone!`)
+                    handler.log(module.exports, `Sending ping...`);
+                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member has joined after a deadzone!`)
                 }
                 lastStaffSeen = Date.now();
                 lastStaffMessage.edit(`Last staff member seen at:\n${new Date()}`);
