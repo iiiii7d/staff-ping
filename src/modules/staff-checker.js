@@ -20,13 +20,13 @@ module.exports = {
             let staffFound = false;
             for (const staffMember of client.config.staff) {
                 if (onlineIds.includes(staffMember)) {
-                    staffFound = true;
+                    staffFound = staffMember;
                 }
             }
             if (staffFound) {
                 if (parseInt(lastStaffSeen + client.config.pingWhenNoStaffFor) < Date.now()) {
                     handler.log(module.exports, `Sending ping...`);
-                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member has joined after a deadzone!`)
+                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffFound}) has joined after a deadzone!`)
                 }
                 lastStaffSeen = Date.now();
                 lastStaffMessage.edit(`Last staff member seen at:\n${new Date()}`);
