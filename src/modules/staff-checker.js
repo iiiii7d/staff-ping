@@ -1,7 +1,7 @@
 const mcUtil = require('minecraft-server-util')
 const handler = require('../module-handler')
 
-const httpsRequest = require('../utils/https-request')
+const httpsRequest = require('../utils/https-post-request')
 module.exports = {
     name: 'Staff Checker',
     run: async (client) => {
