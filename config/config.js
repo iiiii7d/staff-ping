@@ -4,7 +4,7 @@ module.exports = {
     reactionRolesMessage: '811995584915046401',
     updatesChannel: '811724570108100679',
     pingWhenNoStaffFor: 3600000,//60m - 3600000
-    statusUpdateInterval: 60000,//60s
+    statusUpdateInterval: 120000,//60s
     pingRole: '812004126073421885',
     server: 'minecartrapidtransit.net',
     lastStaffSeenMessage: '812103142333349909',
