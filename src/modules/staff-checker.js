@@ -2,6 +2,7 @@ const mcUtil = require('minecraft-server-util')
 const handler = require('../module-handler')
 
 const httpsRequest = require('../utils/https-post-request')
+const getRequest = require('../utils/https-get-request')
 module.exports = {
     name: 'Staff Checker',
     run: async (client) => {
@@ -27,14 +28,17 @@ module.exports = {
             }
             if (staffFound) {
                 if (parseInt(lastStaffSeen + client.config.pingWhenNoStaffFor) < Date.now()) {
+                    const apiResponse = await getRequest(`https://sessionserver.mojang.com/session/minecraft/profile/${staffFound}`);
+                    const staffMemberName = apiResponse.name;
                     handler.log(module.exports, `Sending ping...`);
-                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffFound}) has joined after a deadzone!`)
+                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffMemberName}) has joined after a deadzone!`)
 
                     //send data to google sheet
                     let data = {
                         type: 'deadzoneReport',
                         start: lastStaffSeen,
-                        end: new Date().getTime()
+                        end: new Date().getTime(),
+                        endedBy: staffMemberName
                     }
                     httpsRequest('script.google.com', process.env.APPS_SCRIPT_PATH, data)
                 }
