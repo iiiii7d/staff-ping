@@ -20,7 +20,6 @@ module.exports = {
         '6f4821b0-1996-4f3b-a776-ce0cdc8e7276',//ap_red
         'f65bc7cb-ce43-477c-baf7-1b4c72798bd0',//chiefbozx
         '7c385c95-195e-4576-8771-ec4f6f00dc57',//cynra_
-        'b84ff899-e86a-4b0f-8fc5-6bca7ec4dae9',//megascatterbomb
         '8a928931-aa14-4a1c-8a39-0a7630922001',//minecraftyoshi26
         '5cc70692-7282-4fd5-8d89-11c08535bb11',//sesese9
         'ffdaf900-cdb2-4f09-a0fb-81e3087da4e7',//frumple
