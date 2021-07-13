@@ -10,7 +10,6 @@ module.exports = {
     lastStaffSeenMessage: '812103142333349909',
     staff: [
         'd2938ef4-3044-4a6d-8997-c635f643153c',//echohue
-        '77deb7c8-690c-48f1-a2b1-da87d4c69d76',//kyyl_
         'b5f4e511-d13d-4c93-931b-c526a68c7c74',//skelezomperman
         '125df18c-516d-4bfe-bb04-88254ed25d00',//tom_pairs
         '6f4821b0-1996-4f3b-a776-ce0cdc8e7276',//ap_red
