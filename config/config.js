@@ -19,5 +19,11 @@ module.exports = {
         'ffdaf900-cdb2-4f09-a0fb-81e3087da4e7',//frumple
         '49590c1d-3fb8-4f6c-9bdd-39351621c679',//needn_nl
         '9d623930-b069-4cb5-94e4-81499eb2cb92',//missa_solemnis
+        '472715f5-e298-428c-961f-9b60dbe9dbad',//dint e
+        'fe400b78-b441-4551-8ede-a1295434a13b',//hvt
+        'b080e6f8-9a4d-46d2-8c9e-ec3c6e8b2371',//ondist
+        'e490b27a-d51d-4c59-b277-8cc09c3c4178',//protocol
+        'bbab1811-6079-44b0-aeb2-ad1f3841168f',//narn
+        '09805c69-6a39-4047-8438-5cece9372d95',//mpolo
     ]
 }
