@@ -44,7 +44,7 @@ module.exports = {
                     httpsRequest('script.google.com', process.env.APPS_SCRIPT_PATH, data)
                 }
                 lastStaffSeen = Date.now();
-                lastStaffMessage.edit(`Last staff member seen at:\n${new Date().getTime()}`);
+                lastStaffMessage.edit(`Last staff member seen at:\n<t:${new Date().getTime()}:F> (<t:${new Date().getTime()}:R>)`);
             }
         }, client.config.statusUpdateInterval)
 
