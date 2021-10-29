@@ -31,7 +31,8 @@ module.exports = {
                     const apiResponse = await getRequest(`https://sessionserver.mojang.com/session/minecraft/profile/${staffFound}`);
                     const staffMemberName = apiResponse.name;
                     handler.log(module.exports, `Sending ping...`);
-                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffMemberName}) has joined after a deadzone of ${Math.floor((Date.now() - lastStaffSeen) / 1000 / 60)} minutes!`)
+                    let mins = Math.floor((Date.now() - lastStaffSeen) / 1000 / 60);
+                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffMemberName}) has joined after a deadzone of ${mins}mins (${Math.floor(mins/60)}h${mins%60}mins)!`)
 
                     //send data to google sheet
                     let data = {
@@ -43,7 +44,7 @@ module.exports = {
                     httpsRequest('script.google.com', process.env.APPS_SCRIPT_PATH, data)
                 }
                 lastStaffSeen = Date.now();
-                lastStaffMessage.edit(`Last staff member seen at:\n${new Date()}`);
+                lastStaffMessage.edit(`Last staff member seen at:\n${new Date().getTime()}`);
             }
         }, client.config.statusUpdateInterval)
 

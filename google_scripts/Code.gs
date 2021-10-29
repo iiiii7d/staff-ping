@@ -10,7 +10,7 @@ function exportDeadzones() {
       let start = new Date(d.start);
       let end = new Date(d.end)
 
-      discordPayload.content += `${getTime(start)} - ${getTime(end)} (Ended by ${d.endedBy})\n`;
+      discordPayload.content += `<t:${start.getTime()}:t> - <t:${end.getTime()}:t> (Ended by ${d.endedBy})\n`;
       deadzoneTotal++;
     }
   })

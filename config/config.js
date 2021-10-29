@@ -9,7 +9,6 @@ module.exports = {
     server: 'minecartrapidtransit.net',
     lastStaffSeenMessage: '812103142333349909',
     staff: [
-        'd2938ef4-3044-4a6d-8997-c635f643153c',//echohue
         'b5f4e511-d13d-4c93-931b-c526a68c7c74',//skelezomperman
         '125df18c-516d-4bfe-bb04-88254ed25d00',//tom_pairs
         '6f4821b0-1996-4f3b-a776-ce0cdc8e7276',//ap_red
@@ -21,7 +20,6 @@ module.exports = {
         '9d623930-b069-4cb5-94e4-81499eb2cb92',//missa_solemnis
         '472715f5-e298-428c-961f-9b60dbe9dbad',//dint e
         'fe400b78-b441-4551-8ede-a1295434a13b',//hvt
-        'b080e6f8-9a4d-46d2-8c9e-ec3c6e8b2371',//ondist
         'e490b27a-d51d-4c59-b277-8cc09c3c4178',//protocol
         'bbab1811-6079-44b0-aeb2-ad1f3841168f',//narn
         '09805c69-6a39-4047-8438-5cece9372d95',//mpolo
