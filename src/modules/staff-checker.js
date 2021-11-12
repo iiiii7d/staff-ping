@@ -32,7 +32,7 @@ module.exports = {
                     const staffMemberName = apiResponse.name;
                     handler.log(module.exports, `Sending ping...`);
                     let mins = Math.floor((Date.now() - lastStaffSeen) / 1000 / 60);
-                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffMemberName}) has joined after a deadzone of ${mins}mins (${Math.floor(mins/60)}h${mins%60}mins)!`)
+                    client.channels.cache.get(client.config.updatesChannel).send(`<@&${client.config.pingRole}> A staff member (${staffMemberName}) has joined after a deadzone of ${mins}mins (${Math.floor(mins/60)}h${mins%60}m)!`)
 
                     //send data to google sheet
                     let data = {
