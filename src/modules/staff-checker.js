@@ -10,7 +10,7 @@ module.exports = {
 
         //get data so that we can pick up where we left off
         const lastStaffMessage = await client.channels.cache.get(client.config.updatesChannel).messages.fetch(client.config.lastStaffSeenMessage);
-        var lastStaffSeen = new Date(lastStaffMessage.content.split('\n')[1]).getTime()
+        var lastStaffSeen = parseInt(/<t:(\d*):F>/gm.exec(lastStaffMessage.content.split('\n')[1])[1]);
         handler.log(module.exports, `Startup tasks complete`)
 
         setInterval(async () => {
